@@ -1,0 +1,21 @@
+<div class="container">
+  <dl class="list">
+    <dt>Id</dt>
+    <dd>{{ todo.id }}</dd>
+    <dt>Title</dt>
+    <dd>{{ todo.title }}</dd>
+    <dt>Description</dt>
+    <dd>{{ todo.description }}</dd>
+    <dt>Done</dt>
+    <dd>{{ todo.done }}</dd>
+
+  </dl>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/todo-edit', todo.id]" class="btn btn-success">Edit</a>
+    <button class="btn btn-danger" type="button" (click)="delete(todo.id)">DELETE</button>
+
+  </div>
+</div>
